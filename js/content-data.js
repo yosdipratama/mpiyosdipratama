@@ -119,6 +119,14 @@ const MATERI_DATA = {
   ],
   video: [
     {
+      judul: "Ice Breaking",
+      deskripsi: "Video ice breaking untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "5gckoJP9HZ4",
+      contoh: false
+    },
+    {
       judul: "Mengenal Rukun Islam",
       deskripsi: "Video pengenalan lima Rukun Islam untuk siswa baru, melengkapi materi slide Mengenal Rukun Islam.",
       kelas: "Semua Fase",
