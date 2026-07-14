@@ -119,6 +119,14 @@ const MATERI_DATA = {
   ],
   video: [
     {
+      judul: "Video Perkenalan Guru PAI",
+      deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam, Yosdi Pratama, S.Pd, untuk siswa baru.",
+      kelas: "Semua Fase",
+      tipe: "file",
+      url: "assets/materi/video/perkenalan-guru-pai.mp4",
+      contoh: false
+    },
+    {
       judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
       deskripsi: "Video pengenalan budaya 5S di lingkungan sekolah agar tercipta suasana yang ramah dan penuh rasa hormat.",
       kelas: "Semua Fase",
@@ -140,14 +148,6 @@ const MATERI_DATA = {
       kelas: "Semua Fase",
       tipe: "youtube",
       url: "JYRgjENNkw8",
-      contoh: false
-    },
-    {
-      judul: "Video Perkenalan Guru PAI",
-      deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam, Yosdi Pratama, S.Pd, untuk siswa baru.",
-      kelas: "Semua Fase",
-      tipe: "file",
-      url: "assets/materi/video/perkenalan-guru-pai.mp4",
       contoh: false
     },
     {
