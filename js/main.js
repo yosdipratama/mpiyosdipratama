@@ -120,13 +120,33 @@
     return { slide: "\u{1F4D1}", pdf: "\u{1F4C4}", foto: "\u{1F4F7}", video: "\u{1F3AC}" }[type] || "\u{1F4DA}";
   }
 
+  function hasContent(url) {
+    if (Array.isArray(url)) return url.length > 0 && url[0].trim() !== "";
+    return !!(url && url.trim() !== "");
+  }
+
+  function firstImage(url) {
+    return Array.isArray(url) ? url[0] : url;
+  }
+
   function card(item, type) {
     var wrap = document.createElement("div");
     wrap.className = "materi-card";
 
     var thumb = document.createElement("div");
     thumb.className = "materi-thumb";
-    thumb.innerHTML = icon(type) + (item.contoh ? '<span class="badge-contoh">CONTOH</span>' : "");
+    var previewable = (type === "slide" || type === "foto") && hasContent(item.url) && item.tipe !== "gdrive";
+    if (previewable) {
+      thumb.style.backgroundImage = "url('" + firstImage(item.url) + "')";
+      thumb.style.backgroundSize = "cover";
+      thumb.style.backgroundPosition = "center";
+      thumb.innerHTML = item.contoh ? '<span class="badge-contoh">CONTOH</span>' : "";
+      if (Array.isArray(item.url) && item.url.length > 1) {
+        thumb.innerHTML += '<span class="badge-contoh" style="right:auto;left:10px;background:var(--blue-700);color:#fff">' + item.url.length + " Slide</span>";
+      }
+    } else {
+      thumb.innerHTML = icon(type) + (item.contoh ? '<span class="badge-contoh">CONTOH</span>' : "");
+    }
     wrap.appendChild(thumb);
 
     var body = document.createElement("div");
@@ -144,7 +164,7 @@
     var actions = document.createElement("div");
     actions.className = "materi-actions";
 
-    var hasFile = item.url && item.url.trim() !== "";
+    var hasFile = hasContent(item.url);
     var openBtn = document.createElement("button");
     openBtn.type = "button";
 
@@ -167,25 +187,53 @@
 
   function showMateri(item, type) {
     var html = "<h3>" + item.judul + "</h3>";
+    var isCarousel = (type === "slide" || type === "foto") && Array.isArray(item.url) && item.url.length > 1;
+
     if (type === "pdf") {
       html += '<iframe src="' + item.url + '" title="' + item.judul + '"></iframe>';
       html += '<p style="margin-top:12px"><a class="btn btn-secondary btn-sm" href="' + item.url + '" download>Unduh PDF</a></p>';
-    } else if (type === "foto") {
-      html += '<img src="' + item.url + '" alt="' + item.judul + '">';
+    } else if (type === "foto" && !isCarousel) {
+      html += '<img src="' + firstImage(item.url) + '" alt="' + item.judul + '">';
     } else if (type === "video") {
       if (item.tipe === "youtube") {
         html += '<iframe src="https://www.youtube.com/embed/' + item.url + '" title="' + item.judul + '" allowfullscreen></iframe>';
       } else {
         html += '<video src="' + item.url + '" controls></video>';
       }
-    } else if (type === "slide") {
-      if (item.tipe === "gdrive") {
-        html += '<iframe src="' + item.url + '" title="' + item.judul + '" allowfullscreen></iframe>';
-      } else {
-        html += '<img src="' + item.url + '" alt="' + item.judul + '">';
-      }
+    } else if (type === "slide" && item.tipe === "gdrive") {
+      html += '<iframe src="' + item.url + '" title="' + item.judul + '" allowfullscreen></iframe>';
+    } else if (isCarousel) {
+      html +=
+        '<div class="carousel" data-idx="0">' +
+        '<img class="carousel-img" src="' + item.url[0] + '" alt="' + item.judul + ' - slide 1">' +
+        '<button type="button" class="carousel-nav carousel-prev" aria-label="Slide sebelumnya">&#8249;</button>' +
+        '<button type="button" class="carousel-nav carousel-next" aria-label="Slide berikutnya">&#8250;</button>' +
+        '<div class="carousel-count">1 / ' + item.url.length + "</div>" +
+        "</div>";
+    } else {
+      html += '<img src="' + firstImage(item.url) + '" alt="' + item.judul + '">';
     }
     openModal(html);
+
+    if (isCarousel) {
+      var carousel = modalBox.querySelector(".carousel");
+      var img = carousel.querySelector(".carousel-img");
+      var count = carousel.querySelector(".carousel-count");
+      var idx = 0;
+      function update() {
+        img.src = item.url[idx];
+        img.alt = item.judul + " - slide " + (idx + 1);
+        count.textContent = (idx + 1) + " / " + item.url.length;
+      }
+      carousel.querySelector(".carousel-prev").addEventListener("click", function () {
+        idx = (idx - 1 + item.url.length) % item.url.length;
+        update();
+      });
+      carousel.querySelector(".carousel-next").addEventListener("click", function () {
+        idx = (idx + 1) % item.url.length;
+        update();
+      });
+    }
   }
 
   function renderCategory(list, type, panelId) {
