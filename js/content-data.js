@@ -24,7 +24,9 @@
  *  tipe      : untuk slide -> "gdrive" (Google Slide/Canva) atau "gambar"
  *              untuk video -> "youtube" atau "file"
  *  url       : - slide (gdrive) : link embed Google Slides/Canva
- *              - slide (gambar) : path gambar, mis. "assets/materi/slide/nama.jpg"
+ *              - slide (gambar) : satu path gambar ("assets/materi/slide/nama.jpg"),
+ *                                 atau daftar beberapa gambar untuk satu set slide,
+ *                                 mis. ["assets/materi/slide/1.jpg", "assets/materi/slide/2.jpg"]
  *              - pdf            : path file pdf, mis. "assets/materi/pdf/nama.pdf"
  *              - foto           : path gambar, mis. "assets/materi/foto/nama.jpg"
  *              - video (youtube): ID video YouTube saja, mis. "dQw4w9WgXcQ"
@@ -35,6 +37,20 @@
 
 const MATERI_DATA = {
   slide: [
+    {
+      judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
+      deskripsi: "Slide pengenalan budaya 5S untuk menciptakan lingkungan sekolah yang ramah, nyaman, dan penuh rasa hormat.",
+      kelas: "Semua Fase",
+      tipe: "gambar",
+      url: [
+        "assets/materi/slide/budaya-5s-1.jpg",
+        "assets/materi/slide/budaya-5s-2.jpg",
+        "assets/materi/slide/budaya-5s-3.jpg",
+        "assets/materi/slide/budaya-5s-4.jpg",
+        "assets/materi/slide/budaya-5s-5.jpg"
+      ],
+      contoh: false
+    },
     {
       judul: "Mengenal Rukun Islam",
       deskripsi: "Slide pengenalan lima Rukun Islam dengan gambar sederhana dan mudah dipahami untuk siswa SLB.",
@@ -82,6 +98,14 @@ const MATERI_DATA = {
     }
   ],
   video: [
+    {
+      judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
+      deskripsi: "Video pengenalan budaya 5S di lingkungan sekolah agar tercipta suasana yang ramah dan penuh rasa hormat.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "lH_vqcd5RPQ",
+      contoh: false
+    },
     {
       judul: "Video Perkenalan Guru PAI",
       deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam untuk siswa baru.",
