@@ -338,12 +338,38 @@
   }
   renderJadwal();
 
-  /* ---------------- Gallery lightbox (static photos section) ---------------- */
-  document.querySelectorAll(".galeri-item[data-full]").forEach(function (item) {
-    item.addEventListener("click", function () {
-      openModal('<img src="' + item.dataset.full + '" alt="' + (item.dataset.alt || "") + '">');
+  /* ---------------- Galeri (foto kegiatan) render ---------------- */
+  function renderGaleri() {
+    var grid = document.querySelector(".galeri-grid");
+    if (!grid || typeof MATERI_DATA === "undefined") return;
+
+    var fotoNyata = (MATERI_DATA.foto || []).filter(function (item) {
+      return hasContent(item.url) && !item.contoh;
     });
-  });
+
+    if (!fotoNyata.length) {
+      var empty = document.createElement("div");
+      empty.className = "empty-state";
+      empty.innerHTML = '<div class="big">\u{1F5BC}️</div><p>Galeri foto kegiatan akan ditampilkan di sini begitu Bapak/Ibu Guru menambahkan foto pada tab <strong>Foto</strong> di bagian Materi di atas.</p>';
+      grid.appendChild(empty);
+      return;
+    }
+
+    fotoNyata.forEach(function (item) {
+      var fig = document.createElement("div");
+      fig.className = "galeri-item";
+      var img = document.createElement("img");
+      img.src = item.url;
+      img.alt = item.judul;
+      img.loading = "lazy";
+      fig.appendChild(img);
+      fig.addEventListener("click", function () {
+        openModal("<h3>" + item.judul + "</h3><img src='" + item.url + "' alt='" + item.judul + "'><p style='margin-top:10px;color:var(--ink-soft)'>" + item.deskripsi + "</p>");
+      });
+      grid.appendChild(fig);
+    });
+  }
+  renderGaleri();
 
   /* ---------------- Footer year ---------------- */
   var yearEl = document.querySelector("[data-year]");
