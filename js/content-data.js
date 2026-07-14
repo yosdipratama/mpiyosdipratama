@@ -144,11 +144,11 @@ const MATERI_DATA = {
     },
     {
       judul: "Video Perkenalan Guru PAI",
-      deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam untuk siswa baru.",
+      deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam, Yosdi Pratama, S.Pd, untuk siswa baru.",
       kelas: "Semua Fase",
-      tipe: "youtube",
-      url: "",
-      contoh: true
+      tipe: "file",
+      url: "assets/materi/video/perkenalan-guru-pai.mp4",
+      contoh: false
     }
   ]
 };
