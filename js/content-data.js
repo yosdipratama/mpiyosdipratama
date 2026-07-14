@@ -119,6 +119,14 @@ const MATERI_DATA = {
   ],
   video: [
     {
+      judul: "Muhasabah Diri",
+      deskripsi: "Video muhasabah diri untuk mengajak siswa merenungi dan mengevaluasi diri dalam bingkai nilai-nilai keislaman.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "n2UQ0xGZq7U",
+      contoh: false
+    },
+    {
       judul: "Ice Breaking 1",
       deskripsi: "Video ice breaking untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
       kelas: "Semua Fase",
