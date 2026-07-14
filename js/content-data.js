@@ -119,6 +119,54 @@ const MATERI_DATA = {
   ],
   video: [
     {
+      judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
+      deskripsi: "Video pengenalan budaya 5S di lingkungan sekolah agar tercipta suasana yang ramah dan penuh rasa hormat.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "lH_vqcd5RPQ",
+      contoh: false
+    },
+    {
+      judul: "Tata Cara Berwudhu",
+      deskripsi: "Video panduan tata cara berwudhu yang benar untuk siswa baru.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "GKzTsjOF0qk",
+      contoh: false
+    },
+    {
+      judul: "Mengenal Rukun Islam",
+      deskripsi: "Video pengenalan lima Rukun Islam untuk siswa baru, melengkapi materi slide Mengenal Rukun Islam.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "JYRgjENNkw8",
+      contoh: false
+    },
+    {
+      judul: "Video Perkenalan Guru PAI",
+      deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam, Yosdi Pratama, S.Pd, untuk siswa baru.",
+      kelas: "Semua Fase",
+      tipe: "file",
+      url: "assets/materi/video/perkenalan-guru-pai.mp4",
+      contoh: false
+    },
+    {
+      judul: "Ice Breaking 1",
+      deskripsi: "Video ice breaking untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "5gckoJP9HZ4",
+      contoh: false
+    },
+    {
+      judul: "Ice Breaking 2",
+      deskripsi: "Video ice breaking tambahan untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "fy_54KOS0UI",
+      contoh: false
+    },
+    {
       judul: "Muhasabah Diri 1",
       deskripsi: "Video muhasabah diri untuk mengajak siswa merenungi dan mengevaluasi diri dalam bingkai nilai-nilai keislaman.",
       kelas: "Semua Fase",
@@ -140,54 +188,6 @@ const MATERI_DATA = {
       kelas: "Semua Fase",
       tipe: "youtube",
       url: "V7zgrjlMtRU",
-      contoh: false
-    },
-    {
-      judul: "Ice Breaking 1",
-      deskripsi: "Video ice breaking untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
-      kelas: "Semua Fase",
-      tipe: "youtube",
-      url: "5gckoJP9HZ4",
-      contoh: false
-    },
-    {
-      judul: "Ice Breaking 2",
-      deskripsi: "Video ice breaking tambahan untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
-      kelas: "Semua Fase",
-      tipe: "youtube",
-      url: "fy_54KOS0UI",
-      contoh: false
-    },
-    {
-      judul: "Mengenal Rukun Islam",
-      deskripsi: "Video pengenalan lima Rukun Islam untuk siswa baru, melengkapi materi slide Mengenal Rukun Islam.",
-      kelas: "Semua Fase",
-      tipe: "youtube",
-      url: "JYRgjENNkw8",
-      contoh: false
-    },
-    {
-      judul: "Tata Cara Berwudhu",
-      deskripsi: "Video panduan tata cara berwudhu yang benar untuk siswa baru.",
-      kelas: "Semua Fase",
-      tipe: "youtube",
-      url: "GKzTsjOF0qk",
-      contoh: false
-    },
-    {
-      judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
-      deskripsi: "Video pengenalan budaya 5S di lingkungan sekolah agar tercipta suasana yang ramah dan penuh rasa hormat.",
-      kelas: "Semua Fase",
-      tipe: "youtube",
-      url: "lH_vqcd5RPQ",
-      contoh: false
-    },
-    {
-      judul: "Video Perkenalan Guru PAI",
-      deskripsi: "Sapaan dan perkenalan Guru Pendidikan Agama Islam, Yosdi Pratama, S.Pd, untuk siswa baru.",
-      kelas: "Semua Fase",
-      tipe: "file",
-      url: "assets/materi/video/perkenalan-guru-pai.mp4",
       contoh: false
     }
   ]
