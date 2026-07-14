@@ -119,6 +119,14 @@ const MATERI_DATA = {
   ],
   video: [
     {
+      judul: "Mengenal Rukun Islam",
+      deskripsi: "Video pengenalan lima Rukun Islam untuk siswa baru, melengkapi materi slide Mengenal Rukun Islam.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "JYRgjENNkw8",
+      contoh: false
+    },
+    {
       judul: "Tata Cara Berwudhu",
       deskripsi: "Video panduan tata cara berwudhu yang benar untuk siswa baru.",
       kelas: "Semua Fase",
