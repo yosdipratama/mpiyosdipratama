@@ -81,6 +81,24 @@ const MATERI_DATA = {
   ],
   foto: [
     {
+      judul: "Pengarahan Hari Pertama MPLS",
+      deskripsi: "Kepala sekolah dan guru memberikan pengarahan kepada siswa baru pada hari pertama MPLS, Senin 13 Juli 2026.",
+      url: "assets/materi/foto/pengarahan-hari-pertama.jpg",
+      contoh: false
+    },
+    {
+      judul: "Siswa Menunggu Kegiatan MPLS",
+      deskripsi: "Siswa baru berkumpul di selasar sekolah menunggu rangkaian kegiatan MPLS hari pertama.",
+      url: "assets/materi/foto/siswa-menunggu-mpls.jpg",
+      contoh: false
+    },
+    {
+      judul: "Kegiatan Pagi Ceria",
+      deskripsi: "Keceriaan siswa saat kegiatan Pagi Ceria di selasar sekolah, Selasa 14 Juli 2026.",
+      url: "assets/materi/foto/kegiatan-pagi-ceria.jpg",
+      contoh: false
+    },
+    {
       judul: "Kegiatan Sholat Dhuha Bersama",
       deskripsi: "Dokumentasi kegiatan pembiasaan sholat Dhuha pada masa MPLS.",
       url: "",
