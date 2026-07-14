@@ -119,11 +119,19 @@ const MATERI_DATA = {
   ],
   video: [
     {
-      judul: "Ice Breaking",
+      judul: "Ice Breaking 1",
       deskripsi: "Video ice breaking untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
       kelas: "Semua Fase",
       tipe: "youtube",
       url: "5gckoJP9HZ4",
+      contoh: false
+    },
+    {
+      judul: "Ice Breaking 2",
+      deskripsi: "Video ice breaking tambahan untuk mencairkan suasana dan menyemangati siswa baru selama kegiatan MPLS.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "fy_54KOS0UI",
       contoh: false
     },
     {
