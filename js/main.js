@@ -212,6 +212,84 @@
     renderCategory(MATERI_DATA.video, "video", "panel-video");
   }
 
+  /* ---------------- Jadwal (schedule) render ---------------- */
+  function renderJadwal() {
+    var list = document.querySelector(".jadwal-list");
+    if (!list || typeof JADWAL_DATA === "undefined") return;
+
+    JADWAL_DATA.forEach(function (day, idx) {
+      var details = document.createElement("details");
+      details.className = "jadwal-day";
+      if (idx === 0) details.open = true;
+
+      var summary = document.createElement("summary");
+      summary.innerHTML = '<span class="num">' + day.hari + "</span> " + day.label;
+      details.appendChild(summary);
+
+      if (!day.sudahAda || !day.kegiatan || !day.kegiatan.length) {
+        var empty = document.createElement("div");
+        empty.className = "jadwal-empty";
+        empty.textContent = "Jadwal " + day.label + " belum ditambahkan. Silakan lengkapi di js/jadwal-data.js.";
+        details.appendChild(empty);
+      } else {
+        var wrap = document.createElement("div");
+        wrap.className = "jadwal-table-wrap";
+        var table = document.createElement("table");
+        table.className = "jadwal-table";
+
+        var thead = document.createElement("tr");
+        ["Waktu", "Kegiatan", "Materi / Uraian", "Penanggung Jawab", "Metode"].forEach(function (h) {
+          var th = document.createElement("th");
+          th.textContent = h;
+          thead.appendChild(th);
+        });
+        table.appendChild(thead);
+
+        day.kegiatan.forEach(function (item) {
+          var tr = document.createElement("tr");
+
+          var tdWaktu = document.createElement("td");
+          tdWaktu.textContent = item.waktu;
+          tr.appendChild(tdWaktu);
+
+          var tdKegiatan = document.createElement("td");
+          tdKegiatan.textContent = item.kegiatan;
+          tr.appendChild(tdKegiatan);
+
+          var tdMateri = document.createElement("td");
+          tdMateri.textContent = item.materi || "-";
+          tr.appendChild(tdMateri);
+
+          var tdPJ = document.createElement("td");
+          if (item.penanggungJawab && item.penanggungJawab.length > 1) {
+            var ol = document.createElement("ol");
+            item.penanggungJawab.forEach(function (nm) {
+              var li = document.createElement("li");
+              li.textContent = nm;
+              ol.appendChild(li);
+            });
+            tdPJ.appendChild(ol);
+          } else {
+            tdPJ.textContent = (item.penanggungJawab && item.penanggungJawab[0]) || "-";
+          }
+          tr.appendChild(tdPJ);
+
+          var tdMetode = document.createElement("td");
+          tdMetode.textContent = item.metode || "-";
+          tr.appendChild(tdMetode);
+
+          table.appendChild(tr);
+        });
+
+        wrap.appendChild(table);
+        details.appendChild(wrap);
+      }
+
+      list.appendChild(details);
+    });
+  }
+  renderJadwal();
+
   /* ---------------- Gallery lightbox (static photos section) ---------------- */
   document.querySelectorAll(".galeri-item[data-full]").forEach(function (item) {
     item.addEventListener("click", function () {
