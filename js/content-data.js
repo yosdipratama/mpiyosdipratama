@@ -119,11 +119,19 @@ const MATERI_DATA = {
   ],
   video: [
     {
-      judul: "Muhasabah Diri",
+      judul: "Muhasabah Diri 1",
       deskripsi: "Video muhasabah diri untuk mengajak siswa merenungi dan mengevaluasi diri dalam bingkai nilai-nilai keislaman.",
       kelas: "Semua Fase",
       tipe: "youtube",
       url: "n2UQ0xGZq7U",
+      contoh: false
+    },
+    {
+      judul: "Muhasabah Diri 2",
+      deskripsi: "Video muhasabah diri tambahan untuk mengajak siswa merenungi dan mengevaluasi diri dalam bingkai nilai-nilai keislaman.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "kuRjeu2n7YI",
       contoh: false
     },
     {
