@@ -39,7 +39,7 @@ const MATERI_DATA = {
   slide: [
     {
       judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
-      deskripsi: "Slide pengenalan budaya 5S untuk menciptakan lingkungan sekolah yang ramah, nyaman, dan penuh rasa hormat.",
+      deskripsi: "Slide pengenalan budaya 5S, simulasi role-play etika makan, hingga penutup materi oleh Guru PAI SLBN 1 Ampek Angkek.",
       kelas: "Semua Fase",
       tipe: "gambar",
       url: [
@@ -47,7 +47,9 @@ const MATERI_DATA = {
         "assets/materi/slide/budaya-5s-2.jpg",
         "assets/materi/slide/budaya-5s-3.jpg",
         "assets/materi/slide/budaya-5s-4.jpg",
-        "assets/materi/slide/budaya-5s-5.jpg"
+        "assets/materi/slide/budaya-5s-5.jpg",
+        "assets/materi/slide/budaya-5s-6.jpg",
+        "assets/materi/slide/budaya-5s-7.jpg"
       ],
       contoh: false
     },
