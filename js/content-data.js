@@ -58,16 +58,16 @@ const MATERI_DATA = {
       deskripsi: "Slide pengenalan lima Rukun Islam dengan gambar sederhana dan mudah dipahami untuk siswa SLB.",
       kelas: "Semua Fase",
       tipe: "gambar",
-      url: "",
-      contoh: true
+      url: "assets/materi/slide/rukun-islam.jpg",
+      contoh: false
     },
     {
       judul: "Adab Masuk Sekolah",
       deskripsi: "Materi slide tentang adab dan doa saat masuk lingkungan sekolah baru.",
       kelas: "Fase A-C",
       tipe: "gambar",
-      url: "",
-      contoh: true
+      url: "assets/materi/slide/adab-masuk-sekolah.jpg",
+      contoh: false
     }
   ],
   pdf: [
@@ -118,6 +118,14 @@ const MATERI_DATA = {
     }
   ],
   video: [
+    {
+      judul: "Mengenal Rukun Islam",
+      deskripsi: "Video pengenalan lima Rukun Islam untuk siswa baru, melengkapi materi slide Mengenal Rukun Islam.",
+      kelas: "Semua Fase",
+      tipe: "youtube",
+      url: "GKzTsjOF0qk",
+      contoh: false
+    },
     {
       judul: "Budaya Senyum, Salam, Sapa, Sopan, dan Santun (5S)",
       deskripsi: "Video pengenalan budaya 5S di lingkungan sekolah agar tercipta suasana yang ramah dan penuh rasa hormat.",
